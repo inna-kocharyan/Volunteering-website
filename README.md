@@ -5,7 +5,8 @@
 
 Who 
 
-People of age 16 to 30 who are seeking volunteering opportunities organizations looking for volunteers
+People of age 16 to 30 who are seeking volunteering opportunities,
+Organizations looking for volunteers
       
 Why 
 
