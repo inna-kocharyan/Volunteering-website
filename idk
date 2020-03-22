@@ -1,0 +1,34 @@
+age_min = int(input("Please enter the minimum age requered for this job\n"))
+if age_min <= 15: 
+    print(" this is under the state age limit")
+else:
+    print("ok")
+age_max = int(input("Please enter the maximum age requered for this job\n"))
+if age_max >= 60: 
+    print(" Not possible")
+else:
+    print("ok")
+
+while True:
+    answer = input("Please describe the job opportunity in 100 words\n")
+    if len(answer) <= 100:
+        break
+    else:
+        print("Too much info - keep it shorter!")
+while True:
+	try:
+		number = int(input("what's the minimum years of work that is required\n "))
+		assert(number > 0), 'Number must be bigger than 0'
+		break
+	except:
+		print("error")
+
+#how to make it work#
+import inquirer
+questions = [
+  inquirer.List('English',
+                message="What level of english is requiered ?",
+                choices=['Native', 'intermediate', 'beginner ', 'not requiered '],
+            ),
+]
+answers = inquirer.prompt(questions)
