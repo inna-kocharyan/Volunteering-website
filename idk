@@ -1,3 +1,4 @@
+#to check the age that the company wants#
 age_min = int(input("Please enter the minimum age requered for this job\n"))
 if age_min <= 15: 
     print(" this is under the state age limit")
@@ -8,6 +9,7 @@ if age_max >= 60:
     print(" Not possible")
 else:
     print("ok")
+    #this part has  word limit  for describing the company#
 
 while True:
     answer = input("Please describe the job opportunity in 100 words\n")
@@ -22,6 +24,7 @@ while True:
 		break
 	except:
 		print("error")
+		#this part is choosing languages and levels of the language#
 
 choices = ['Native', 'intermediate', 'beginner ', 'not requiered']
 
