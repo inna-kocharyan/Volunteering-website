@@ -23,12 +23,24 @@ while True:
 	except:
 		print("error")
 
-#how to make it work#
-import inquirer
-questions = [
-  inquirer.List('English',
-                message="What level of english is requiered ?",
-                choices=['Native', 'intermediate', 'beginner ', 'not requiered '],
-            ),
-]
-answers = inquirer.prompt(questions)
+choices = ['Native', 'intermediate', 'beginner ', 'not requiered']
+
+language_level = {
+  "English" : "",
+  "German" : "",
+  "Armenian" : ""
+
+}
+
+for key in language_level.keys():
+  level = input("what is your level of " + key + ". Please select from the following choices: " + str(choices))
+
+  if (level in choices):
+    print("valid choice")
+  else:
+    print("invalid")
+
+  language_level[key] = level
+
+print(language_level)
+
