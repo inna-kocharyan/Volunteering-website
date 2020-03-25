@@ -63,6 +63,20 @@ if(isValidDate) :
     print ("Input date is valid ..")
 else :
     print ("Input date is not valid..")
-#
+#if interwiew is requered #
+def ask_user():
+    check = str(input("is an interview requered ? (Y/N): ")).lower().strip()
+    try:
+        if check[0] == 'y':
+            return ("okay")
+        elif check[0] == 'n':
+            return ("okay")
+        else:
+            print('Invalid Input')
+            return ask_user()
+    except Exception as error:
+        print("Please enter valid inputs")
+        print(error)
+        return ask_user()
 
 
