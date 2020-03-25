@@ -50,3 +50,19 @@ print(language_level)
 #this is the last part after the whole coad is writen#
 input(" please insert any website links (*not requiered*)\n")
 
+#when dose the opertunity start and end##
+import datetime
+inputDate = input("Enter the date in format 'dd/mm/yy' : ")
+day,month,year = inputDate.split('/')
+isValidDate = True
+try :
+    datetime.datetime(int(year),int(month),int(day))
+except ValueError :
+    isValidDate = False
+if(isValidDate) :
+    print ("Input date is valid ..")
+else :
+    print ("Input date is not valid..")
+#
+
+
