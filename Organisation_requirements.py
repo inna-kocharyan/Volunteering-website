@@ -3,12 +3,12 @@ age_min = int(input("Please enter the minimum age requered for this job\n"))
 if age_min <= 15: 
     print(" this is under the state age limit")
 else:
-    print("ok")
+    print("")
 age_max = int(input("Please enter the maximum age requered for this job\n"))
 if age_max >= 60: 
     print(" Not possible")
 else:
-    print("ok")
+    print("")
     #this part has  word limit  for describing the company#
 
 while True:
@@ -19,7 +19,7 @@ while True:
         print("Too much info - keep it shorter!")
 while True:
 	try:
-		number = int(input("what's the minimum years of work that is required\n "))
+		number = int(input("what's the minimum years of work expiriance  that is required\n "))
 		assert(number > 0), 'Number must be bigger than 0'
 		break
 	except:
@@ -64,19 +64,10 @@ if(isValidDate) :
 else :
     print ("Input date is not valid..")
 #if interwiew is requered #
-def ask_user():
-    check = str(input("is an interview requered ? (Y/N): ")).lower().strip()
-    try:
-        if check[0] == 'y':
-            return ("okay")
-        elif check[0] == 'n':
-            return ("okay")
-        else:
-            print('Invalid Input')
-            return ask_user()
-    except Exception as error:
-        print("Please enter valid inputs")
-        print(error)
-        return ask_user()
-
-
+interview = (input("is an interwivew requiered? (y/n)\n"))
+if interview=='No'or 'Yes' or 'no' or 'yes' :
+    print("")
+else:
+    print("please enter a valid answere")
+        #ask the location #
+input("where is the job opertunity going to be held\n")
