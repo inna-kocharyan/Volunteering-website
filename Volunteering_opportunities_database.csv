@@ -1,5 +1,5 @@
-Volunteering_Opportunity,minimum_age,maximum_age,experience,excel,English,Russian
-1,18,20,3,yes,beginner,beginner
-2,20,25,1,no,intermediate,not_required
-3,24,26,4,yes,not_required,fluent
-4,16,18,1,yes,fluent,not_required
+Volunteering_Opportunity,minimum_age,maximum_age,experience,excel,English,Russian,success_index
+1,18,20,3,yes,beginner,beginner,5
+2,20,25,1,no,beginner,not_required,6
+3,24,26,4,yes,not_required,fluent,7
+4,16,18,1,yes,fluent,not_required,4
