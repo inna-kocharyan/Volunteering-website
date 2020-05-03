@@ -1,0 +1,14 @@
+body, html {
+background-color:#a1c4fd ;
+margin: 0;
+}
+h1 {
+text-align: center;
+}
+h2 {
+text-align: center;
+}
+
+div.a {
+  line-height: 200%;
+}
