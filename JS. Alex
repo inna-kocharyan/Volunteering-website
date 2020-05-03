@@ -1,0 +1,18 @@
+const opportunity = {
+name: "Rana",
+addrase:"Yerevan",
+email:"alex@yahoo.com",
+number:"077176842",
+date:"01/05/2020",
+
+}
+window.localStorage.setItem('Example1',JSON.stringify(opportunity));window.localStorage.getItem('Example1');
+
+const opportunity2 = {
+name: "Alex",
+addrase:"Yerevan",
+email:"alex@yahoo.com",
+number:"077176842",
+date:"01/05/2020",
+}
+window.localStorage.setItem('Example2',JSON.stringify(opportunity2));window.localStorage.getItem('Example2');
