@@ -20,33 +20,35 @@ function formValidation() {
     var emailValue = email.value
 
     var armlang = document.getElementById("armlang");
-    var armlang = armlang.value
+    var armlangValue = armlang.value
     var ruslang = document.getElementById("ruslang");
-    var ruslang = ruslang.value
+    var ruslangValue = ruslang.value
     var englang = document.getElementById("englang");
-    var englang = englang.value
+    var englangValue = englang.value
     var gerlang = document.getElementById("gerlang");
-    var gerlang = gerlang.value
+    var gerlangValue = gerlang.value
     var frlang = document.getElementById("frlang");
-    var frlang = frlang.value
+    var frlangValue = frlang.value
     var arblang = document.getElementById("arblang");
-    var arblang = arblang.value
+    var arblangValue = arblang.value
     var otherlang = document.getElementById("otherlang");
-    var otherlang = otherlang.value
+    var otherlangValue = otherlang.value
 
     var student = document.getElementById("student");
-    var student = student.value
+    var studentValue = student.value
     var undergraduate = document.getElementById("undergraduate");
-    var undergraduate = undergraduate.value
+    var undergraduateValue = undergraduate.value
     var graduate = document.getElementById("graduate");
-    var graduate = graduate.value
+    var graduateValue = graduate.value
     var employee = document.getElementById("employee");
-    var employee = employee.value
+    var employeeValue = employee.value
     var other = document.getElementById("other");
-    var other = other.value
+    var otherValue = other.value
 
     var exp = document.getElementById("exp");
+    var expValue = exp.value
     var about = document.getElementById("about");
+    var aboutValue = about.value
     if (name_validation(name, 3, 15)) {
         if (letter_validation1(name)) {
             if (surname_validation(surname, 5, 20)) {
@@ -59,7 +61,7 @@ function formValidation() {
                                         if (status_validation(student, undergraduate, graduate, employee, other)) {
                                             if (about_validation(about, 4, 500)) {
                                                 if (exp_validation(exp, 4, 500)) {
-                                                    var obj = { "name ": nameValue,"surname ": surnameValue, "region ": regionValue, "address ": addressValue, "email ": emailValue, "languages ": armlang, "status ": studentValue, "experience": experienceValue, "about": aboutValue }
+                                                    var obj = { "name ": nameValue,"surname ": surnameValue, "region ": regionValue, "address ": addressValue, "email ": emailValue, "languages ": armlang, "status ": studentValue, "experience": expValue, "about": aboutValue }
                                                     window.localStorage.setItem("INFO", JSON.stringify(obj))
                                                     alert('Form Succesfully Submitted');
                                                 }
@@ -225,7 +227,7 @@ function status_validation(student, undergraduate, graduate, employee, other) {
 
 function about_validation(about, x, y) {
     var about_len = about.value.length;
-    if (about_len == 0 || about_len >= y || about_len < 4) {
+    if (about_len == 0 || about_len >= y || about_len < x) {
         alert("About blank should not be empty and the length should be between from " + x + " to " + y);
         about.focus();
         return false;
