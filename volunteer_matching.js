@@ -6,11 +6,12 @@ var Armenian_Level_Input = parseInt(document.getElementById("Armenian_level").va
 var German_Level_Input = parseInt(document.getElementById("German_level").value);
 var display = document.getElementById("MatchingVolunteers");
 var volunteer;
-for ( index in volunteers_list.volunteers) {
-volunteer = volunteers_list.volunteers[index]
+display.innerHTML = "Our volunteers list that match your criteria"+"<br>"
+for ( var i in volunteers_list.volunteers) {
+volunteer = volunteers_list.volunteers[i]
 if ( volunteer["Age"] >= Volunteer_age && volunteer["English"]>=English_Level_Input && volunteer["Armenian"] >= Armenian_Level_Input && volunteer["German"] >= German_Level_Input && volunteer["Russian"] >= Russian_Level_Input) {
   console.log(volunteer["First Name"])
-  display.innerHTML = "Our volunteers list that match your criteria" + "<br>" + volunteer["Last Name"]+ " " + volunteer["First Name"]
+  display.innerHTML +=  volunteer["Last Name"]+ " " + volunteer["First Name"] + "<br>"
   }
 }
 }
