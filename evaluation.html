@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>repl.it</title>
+ <link href="evaluation.css" rel="stylesheet" type="text/css" />
+ <style>
+.sansserif {
+font-family: 'Roboto', sans-serif;
+}
+</style>
+</head>
+<body class = "sansserif">
+ <script src="evaluation.js"></script>
+
+<img src="Helping Hand_free-file.png" alt="logo">
+<div id = "header">
+<h1> Volunteer Evaluation </h1>
+<h2> Please evaluate your volunteers according to their performance on the given criteria, so that we improve our service</h2>
+</div>
+ 
+ 
+ 
+<datalist id="evaluation">
+ <option value="Excellent">
+ <option value="Good">
+ <option value="OK">
+ <option value="Bad">
+ <option value="Very Bad">
+</datalist>
+ 
+ 
+<div class = "a">
+Please state the full name of the volunteer you are evaluating
+<br>
+<input id="volunteer_name">
+<br>
+Please state the level of responsibility of the volunteer
+<br>
+<input list="evaluation" id="responsibilty" >
+<br>
+Please state the level of time-management of the volunteer
+<br>
+<input list = "evaluation" id="time">
+<br>
+Please state the level of cooperation of the volunteer
+<br>
+<input list = "evaluation" id="cooperation" >
+<br>
+Please state the language level of the volunteer
+<br>
+<input list = "evaluation" id="language" >
+<br>
+Please state the organisational skills of the volunteer
+<br>
+<input list = "evaluation" id="organisation" >
+<br>
+Please state the project-management skills of the volunteer
+<br>
+<input list = "evaluation" id="project">
+<br>
+<input type="button" value="Submit My Evaluation"
+onclick="Submission()">
+ 
+ 
+ 
+</div>
+ 
+<div id="Submission_response"></div>
+<br>
+<div id = "result"></div>
+</body>
+</html>
