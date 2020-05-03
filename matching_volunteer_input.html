@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style>
+.sansserif {
+font-family: 'Roboto', sans-serif;
+}
+</style>
+  <body class="sansserif">
+    <img src="unnamed.png" alt="logo">
+    <h1> Input Your Skills and Our App Will Find The Perfect Volunteering Job For You</h1>
+    <hr>
+    <label for="age"> Please incert your age </label>
+    <input type="number" id="age" name="age" min="10" max="30"><br><br>
+    <hr>
+    <label for="experience"> Please specify your experience in years </label>
+    <input type="number" id="experience" name="experience" min="0"><hr>
+    <label for="excel"> Can you use excel? </label> 
+    <select id="ex">
+      <option value="1">no</option>
+      <option value="2">yes</option>
+    </select>
+    <hr>
+    <label for="English"> Please specify your level of English</label>
+
+    <select id="English">
+      <option value="1">beginner</option>
+      <option value="2">intermediate</option>
+      <option value="3"> fluent</option>
+    </select>
+    <hr>
+
+    <label for="Russian"> Please specify your level of Russian</label>
+    <select id="Russian">
+      <option value="1">beginner</option>
+      <option value="2">intermediate</option>
+      <option value="3"> fluent</option>
+    </select>
+    <hr>
+    <button onclick="matching()" id="matching">Find An Opportunity</button>
+    <div id="display1"></div> 
+    <script src="jobs_list.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
