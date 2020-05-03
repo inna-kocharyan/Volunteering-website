@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript Form Validation using a sample registration form</title>
+<link rel='stylesheet' href='volunteer-form.css' type='text/css' />
+<script src="volunteer-form.js"></script>
+</head>
+
+<body onload="document.registration.name.focus();">
+<h1>Registration Form</h1>
+As a potential employee PLEASE fill the form very attentively
+<form name='registration' onSubmit="return formValidation();">
+
+<ul>
+
+<br><li><label for="name">Name:</label></li>
+<input type="text" id="name" name="name" size="50" />
+
+<br><li><label for="surname">Surename:</label></li>
+<input type="text" id="surname" name="surname" size="50" />
+
+<br><li><label for="birthday">Birthday:</label></li>
+<input type="date" id="birthday" name="birthday"
+       value="0001-01-01"
+       min="1960-01-01" max="2002-01-01">
+
+<br><li><label for="gender">Gender:</label></li>
+<select id="gender" name="gender">
+<option selected="" value="Default">(Please select your gender)</option>
+<option value="M">Male</option>
+<option value="F">Female</option>
+<option value="O">Other</option>
+</select>
+
+<br><li><label for="region">Region:</label></li>
+<select id="region" name="region">
+<option selected="" value="Default">(Please select your region)</option>
+<option value="YER">Yerevan</option>
+<option value="ARG">Aragatsotn</option>
+<option value="ARA">Ararat</option>
+<option value="ARM">Armavir</option>
+<option value="GEX">Gexarquniq</option>
+<option value="LOR">Lori</option>
+<option value="KOT">Kotayq</option>
+<option value="SHI">Shirak</option>
+<option value="SYU">Syuniq</option>
+<option value="TAV">Tavush</option>
+<option value="VAY">Vayoc Dzor</option>
+</select>
+
+<br><li><label for="address">Address:</label></li>
+<input type="text" id="address" name="address" size="50" />
+
+<br><li><label for="married">Are you maaried?<br>/*optional/:</label></li>
+<select id="married" name="married" multiple>
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+  <option value="this year">this year</option>
+</select><br><br><br><br>
+
+<br><li><label for="served">Have you served in army?<br>/*optional/:</label></li>
+<select id="served" name="served" multiple>
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+</select><br><br><br><br>
+
+<br><li><label for="email">Email:</label></li>
+<input type="text" id="email" name="email" size="50" /><br>
+
+<br><li><label>Known languages:</label></li><br><br>
+<input type="checkbox" id="armlang" name="armlang" value="arm" />Armenian<br>
+<input type="checkbox" id="ruslang" name="ruslang" value="rus" />Russian<br>
+<input type="checkbox" id="englang" name="englang" value="eng" />English<br>
+<input type="checkbox" id="gerlang" name="gerlang" value="ger" />German<br>
+<input type="checkbox" id="frlang" name="frlang" value="fr" />Frence<br>
+<input type="checkbox" id="arblang" name="arblang" value="arb" />Arabian<br>
+<input type="checkbox" id="otherlang" name="otherlang" value="other" />Other<input type="option" name="lang" value="Type here" /><br>
+
+<br><li><label for="status">Current status:</label></li><br><br>
+<input type="checkbox" id="student" name="student" value="student">Student<br>
+<input type="checkbox" id="undergraduate" name="undergraduate" value="undergraduate">Undergraduate<br>
+<input type="checkbox" id="graduate" name="graduate" value="graduate">Graduate<br>
+<input type="checkbox" id="employee" name="employee" value="employee">Employee<br>
+<input type="checkbox" id="other" name="other" value="other">Other<br>
+
+<br><li><label for="hours">Available hours per week:</label></li><br>
+<input type="range" name="hours" id="range_hours" value="0" min="4" max="20" oninput="range_hours_disp.value = range_hours.value">
+<output id="range_hours_disp"></output><br>
+
+<br><li><label for="about">About:<br><br>*If you do not have any write "None"</label></li>
+<textarea name="about" id="about"></textarea><br>
+
+<br><li><label for="exp">Volunteering experience:<br><br>*If you do not have any write "None"</label></li>
+<textarea name="exp" id="exp"></textarea><br>
+
+</ul>
+</form>
+
+<button id="button">Submit</button> 
+
+</body>
+</html>
