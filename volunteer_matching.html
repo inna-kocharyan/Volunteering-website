@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>repl.it</title>
+<link href="volunteer_matching.css" rel="stylesheet" type="text/css" />
+<style>
+.sansserif {
+font-family: 'Roboto', sans-serif;
+}
+</style>
+</head>
+<body class = "sansserif">
+<img src="Helping Hand_free-file.png" alt="logo">
+<div id = "header">
+<h1> Organization requirements </h1>
+<h2> Please choose your required criteria for a volunteer and we will pick ideal candidates for you</h2>
+</div>
+<div id = "age">
+ Please enter a minimum age for the volunteer
+ <br>
+ <input type ="number" id="required_age" onkeyup="checkAge(event)">
+</div>
+<br>
+<p>Just choose the number corresponding to the level of skill you require </p>
+<div id = "level_of_skill">
+<table>
+ <td>Level</td>
+ <td>Corresponding Number</td>
+ <tr>
+   <td>Excellent</td>
+   <td><span class = "Excellent" id= "excellent">5</span></td>
+  </tr>
+ <tr>
+   <td>Good</td>
+   <td><span class = "Good" id= "good">4</span></td>
+ </tr>
+ <tr>
+   <td>Intermediate</td>
+   <td><span class = "Intermediate" id= "intermediate">3</span></td>
+ </tr>
+ <tr>
+   <td>Beginner</td>
+   <td><span class = "Beginner" id= "beginner">2</span></td>
+ </tr>
+ <tr>
+   <td>Not required</td>
+   <td><span class = "N/A" id= "n/a">1</span></td>
+</table>
+</div>
+<br>
+<datalist id="level">
+ <option value="1">
+ <option value="2">
+ <option value="3">
+ <option value="4">
+ <option value="5">
+</datalist>
+<div id = "requirements">
+Please enter a required level of English
+ <br>
+ <input list= "level" id="English_level">
+<br>
+Please enter a required level of Russian
+ <br>
+ <input list = "level" id = "Russian_level">
+<br>
+Please enter a required level of Armenia
+<br>
+<input list= "level" id="Armenian_level">
+<br>
+Please enter a required level of German
+<br>
+ <input list= "level" id="German_level">
+<br>
+</div>
+<br>
+<input type="button" value="Find Me Volunteers"
+onclick="Volunteermatcher()">
+<div id="MatchingVolunteers"></div>
+<script src="data.js"></script>
+<script src="volunteer_matching.js"></script>
+</body>
+</html>
