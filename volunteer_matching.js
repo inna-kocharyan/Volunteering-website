@@ -13,5 +13,22 @@ if ( volunteer["Age"] >= Volunteer_age && volunteer["English"]>=English_Level_In
   console.log(volunteer["First Name"])
   display.innerHTML +=  volunteer["Last Name"]+ " " + volunteer["First Name"] + "<br>"
   }
+  else {
+    display.innerHTML = "Sorry. We do not have any volunteers matching your criteria."
+  }
 }
+}
+
+function checkAge(evt) {
+  var Volunteer_age = parseInt(document.getElementById("required_age").value);
+
+  if ( Volunteer_age > 100 || Volunteer_age < 0) {
+    console.log("Wrong value")
+    evt.currentTarget.style.color = "red"
+  } else {
+    console.log("Correct Value")
+    evt.currentTarget.style.color = "black"
+    
+
+  }
 }
