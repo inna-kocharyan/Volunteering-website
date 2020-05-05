@@ -1,18 +1,19 @@
-const opportunity = {
-name: "Rana",
-addrase:"Yerevan",
-email:"alex@yahoo.com",
-number:"077176842",
-date:"01/05/2020",
-
-}
-window.localStorage.setItem('Example1',JSON.stringify(opportunity));window.localStorage.getItem('Example1');
-
-const opportunity2 = {
-name: "Alex",
-addrase:"Yerevan",
-email:"alex@yahoo.com",
-number:"077176842",
-date:"01/05/2020",
-}
-window.localStorage.setItem('Example2',JSON.stringify(opportunity2));window.localStorage.getItem('Example2');
+function Submission(){
+var evaluation = {};
+evaluation.comapnyname = document.getElementById("companyname").value;
+evaluation.email = document.getElementById("address").value;
+evaluation.address=document.getElementById("address").value;
+evaluation.companynumber=document.getElementById("number").value;
+evaluation.date=document.getElementById("date").value;
+evaluation.education = document.getElementById("dropdown").value;
+evaluation.english = document.getElementById("dropdown2").value;
+evaluation.armenian = document.getElementById("dropdown3").value;
+evaluation.russian = document.getElementById("dropdown4").value;
+evaluation.interview = document.getElementById("interview").value;
+evaluation.travel = document.getElementById("age").value;
+evaluation.pay = document.getElementById("pay").value;
+evaluation.privliage = document.getElementById("privliage").value;
+evaluation.msg = document.getElementById("msg").value;
+evaluation.msg2 = document.getElementById("msg2").value;
+console.log(evaluation)
+localStorage.setItem( 'evaluation', JSON.stringify(evaluation) );
