@@ -16,7 +16,6 @@ evaluation.privliage = document.getElementById("privliage").value;
 evaluation.msg = document.getElementById("msg").value;
 evaluation.msg2 = document.getElementById("msg2").value;
 console.log(evaluation)
+ 
 localStorage.setItem( 'evaluation', JSON.stringify(evaluation) );
 }
- 
- 
